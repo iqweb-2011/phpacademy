@@ -9,7 +9,7 @@ $form = new Form($request);
 
 $msg = $request->get('flash_msg'); // $_GET['username']
 
-if ($_POST) {
+if ($request->isPost()) {
     if ($form->isValid()) {
         // bla-bla
         header('Location: /?flash_msg=valid');

@@ -21,4 +21,8 @@ class Request
         return isset($this->get[$key]) ? $this->get[$key] : null;
     }
 
+    public function isPost()
+    {
+        return (bool)$_POST;
+    }
 }
